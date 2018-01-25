@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,9 +16,7 @@ import { AppService } from './app.service';
     BodyComponent,
     FooterComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule, FlexLayoutModule],
   providers: [AppService],
   bootstrap: [AppComponent]
 })
