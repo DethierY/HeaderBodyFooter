@@ -1,5 +1,8 @@
-<ul>
-  <li *ngFor="let title of listTitles"
+<button mat-icon-button [matMenuTriggerFor]="menu">
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let title of listTitlesHeader"
     (click) = "selectMenu(title)"
-    [class] = "changeColor(title)">{{title}}</li>
-</ul>
+    [style.color] = "changeColor(title)"><span>{{title}}</span></button>
+</mat-menu>

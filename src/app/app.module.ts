@@ -13,7 +13,7 @@ import { EditComponent } from './edit/edit.component';
 import { AppService } from './app.service';
 
 import {MatMenuModule} from '@angular/material/menu';
-
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -30,7 +30,8 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

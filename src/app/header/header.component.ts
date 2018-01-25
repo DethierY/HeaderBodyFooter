@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   constructor(public appService: AppService) { }
   
-  listTitles =  ['Home', 'Skills', 'Experience', 'Contact', 'Todo'];
+  listTitlesHeader =  ['Home', 'Skills', 'Experience', 'Contact', 'Todo'];
 
   ngOnInit() {
   }
