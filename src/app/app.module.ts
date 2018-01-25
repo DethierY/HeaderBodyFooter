@@ -12,9 +12,10 @@ import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { AppService } from './app.service';
 
-import {MatMenuModule} from '@angular/material/menu';
-import {MatIconModule} from '@angular/material/icon';
-
+import {MatMenuModule,
+        MatButtonModule,
+        MatIconModule,
+        MatToolbarModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import {MatIconModule} from '@angular/material/icon';
     FlexLayoutModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
+    MatToolbarModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
