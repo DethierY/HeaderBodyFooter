@@ -6,7 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddComponent} from './add/add.component';
+import { ListComponent } from './list/list.component';
+import { EditComponent } from './edit/edit.component';
 import { AppService } from './app.service';
+
 
 
 @NgModule({
@@ -14,7 +18,10 @@ import { AppService } from './app.service';
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    AddComponent,
+    ListComponent,
+    EditComponent
   ],
   imports: [BrowserModule, FlexLayoutModule],
   providers: [AppService],
