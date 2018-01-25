@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
 
   selectMenu(title) {
     this.appService.selectedMenu = title;
-    console.log(this.appService.selectedMenu);
   }
 
   changeColor(title): string {

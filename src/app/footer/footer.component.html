@@ -1,4 +1,5 @@
 <ul>
-  <li>Legal notices</li>
-  <li>Credits</li>
+  <li *ngFor="let title of listTitlesFooter"
+    (click) = "selectMenu(title)"
+    [style.color] = "changeColor(title)">{{title}}</li>
 </ul>

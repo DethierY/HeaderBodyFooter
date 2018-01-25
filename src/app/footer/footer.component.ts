@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  listTitlesFooter =  ['Legal notices', 'Credits'];
+
+  constructor(public appService: AppService) { }
 
   ngOnInit() {
   }
 
+  selectMenu(title) {
+    this.appService.selectedMenu = title;
+    console.log(this.appService.selectedMenu);
+  }
+
+  changeColor(title): string {
+    if (title === this.appService.selectedMenu) {
+      return 'red';
+    } else {
+      return 'black';
+    }
+  }
 }
