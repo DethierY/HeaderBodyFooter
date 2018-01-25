@@ -1,0 +1,5 @@
+<ul>
+  <li *ngFor="let title of listTitles"
+    (click) = "selectMenu(title)"
+    [class] = "changeColor(title)">{{title}}</li>
+</ul>
