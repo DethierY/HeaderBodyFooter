@@ -15,7 +15,8 @@ import { AppService } from './app.service';
 import {MatMenuModule,
         MatButtonModule,
         MatIconModule,
-        MatToolbarModule} from '@angular/material';
+        MatToolbarModule,
+        MatCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatMenuModule,
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
