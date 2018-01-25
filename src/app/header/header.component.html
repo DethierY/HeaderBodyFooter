@@ -1,12 +1,17 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" fxLayoutAlign="space-between center">
+  <h1>Mon Site</h1>
+  <!-- <div fxLayout="row" fxLayoutAlign="end" [style.width.%]="100"> -->
+  <!-- <span [style.flex]="1"></span> solution 1-->
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <mat-icon>more_vert</mat-icon>
   </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item *ngFor="let title of listTitlesHeader"
-      (click) = "selectMenu(title)"
-      [style.color] = "changeColor(title)">
-      <span>{{title}}</span>
-    </button>
-  </mat-menu>
+  <!-- </div> -->
 </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item *ngFor="let title of listTitlesHeader"
+    (click) = "selectMenu(title)"
+    [style.color] = "changeColor(title)">
+    <span>{{title}}</span>
+  </button>
+</mat-menu>

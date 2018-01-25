@@ -1,5 +1,5 @@
-<ul>
-  <li *ngFor="let title of listTitlesFooter"
+<mat-toolbar color="primary" fxLayoutAlign="start center">
+  <button mat-button *ngFor="let title of listTitlesFooter"
     (click) = "selectMenu(title)"
-    [style.color] = "changeColor(title)">{{title}}</li>
-</ul>
+    [style.color] = "changeColor(title)">{{title}}</button>
+</mat-toolbar>
