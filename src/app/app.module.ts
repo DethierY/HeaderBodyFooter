@@ -11,12 +11,19 @@ import { AddComponent} from './add/add.component';
 import { ListComponent } from './list/list.component';
 import { EditComponent } from './edit/edit.component';
 import { AppService } from './app.service';
+import { HomeComponent } from './home/home.component';
 
 import {MatMenuModule,
         MatButtonModule,
         MatIconModule,
         MatToolbarModule,
         MatCardModule} from '@angular/material';
+import { SkillsComponent } from './skills/skills.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ContactComponent } from './contact/contact.component';
+import { TodoComponent } from './todo/todo.component';
+import { LegalComponent } from './legal/legal.component';
+import { CreditsComponent } from './credits/credits.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +33,14 @@ import {MatMenuModule,
     FooterComponent,
     AddComponent,
     ListComponent,
-    EditComponent
+    EditComponent,
+    HomeComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    ContactComponent,
+    TodoComponent,
+    LegalComponent,
+    CreditsComponent
   ],
   imports: [
     BrowserModule,
