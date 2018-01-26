@@ -8,8 +8,6 @@ import { AppService } from '../app.service';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public appService: AppService) { }
-
   urlList = [
     {name: 'Home', url: '/'},
     {name: 'Skills', url: '/skills'},
@@ -18,17 +16,26 @@ export class HeaderComponent implements OnInit {
     {name: 'Todo', url: '/todo'}
   ];
   
-  listTitlesHeader =  ['Home', 'Skills', 'Experience', 'Contact', 'Todo'];
+  selectedMenu = 'Home';
+
+  constructor(public appService: AppService) { }
 
   ngOnInit() {
   }
 
-  selectMenu(title) {
-    this.appService.selectedMenu = title;
+  selectMenu(title): void {
+    this.selectedMenu = title;
+  }
+
+
+  navChoice(title): string {
+    const choixMenu: string = this.urlList.find(function(urlListItem) {
+      return urlListItem.name === title; }).name;
+      return choixMenu;
   }
 
   changeColor(title): string {
-    if (title === this.appService.selectedMenu) {
+    if (title === this.selectedMenu) {
       return 'red';
     } else {
       return 'black';
@@ -36,9 +43,10 @@ export class HeaderComponent implements OnInit {
   }
 
   routing(title, urlList): string {
+    const choix = this.navChoice(title);
     const route: string = this.urlList.find(function(urlListItem) {
-      return urlListItem.name === title; }).url;
-    console.log(route);
+      return urlListItem.name === choix; }).url;
     return route;
   }
+
 }

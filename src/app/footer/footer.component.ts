@@ -15,16 +15,4 @@ export class FooterComponent implements OnInit {
   ngOnInit() {
   }
 
-  selectMenu(title) {
-    this.appService.selectedMenu = title;
-    console.log(this.appService.selectedMenu);
-  }
-
-  changeColor(title): string {
-    if (title === this.appService.selectedMenu) {
-      return 'red';
-    } else {
-      return 'black';
-    }
-  }
 }

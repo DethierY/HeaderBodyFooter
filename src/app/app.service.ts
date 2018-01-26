@@ -18,7 +18,6 @@ export class AppService {
     name: 'todo5'}
   ];
   
-  selectedMenu = 'Home';
   editableToDo: ToDo;
   editable = false;
   
