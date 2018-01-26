@@ -7,10 +7,11 @@
   </button>
   <!-- </div> -->
 </mat-toolbar>
-
+    <!-- (click) = "selectMenu(title)" -->
 <mat-menu #menu="matMenu">
   <button mat-menu-item *ngFor="let title of listTitlesHeader"
     (click) = "selectMenu(title)"
+    [routerLink] ="routing(title)"
     [style.color] = "changeColor(title)">
     <span>{{title}}</span>
   </button>

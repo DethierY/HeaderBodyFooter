@@ -9,6 +9,14 @@ import { AppService } from '../app.service';
 export class HeaderComponent implements OnInit {
 
   constructor(public appService: AppService) { }
+
+  urlList = [
+    {name: 'Home', url: '/'},
+    {name: 'Skills', url: '/skills'},
+    {name: 'Experience', url: '/experience'},
+    {name: 'Contact', url: '/contact'},
+    {name: 'Todo', url: '/todo'}
+  ];
   
   listTitlesHeader =  ['Home', 'Skills', 'Experience', 'Contact', 'Todo'];
 
@@ -25,5 +33,12 @@ export class HeaderComponent implements OnInit {
     } else {
       return 'black';
     }
+  }
+
+  routing(title, urlList): string {
+    const route: string = this.urlList.find(function(urlListItem) {
+      return urlListItem.name === title; }).url;
+    console.log(route);
+    return route;
   }
 }

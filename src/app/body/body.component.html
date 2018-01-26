@@ -1,34 +1,4 @@
 <mat-card>
-  <ng-container [ngSwitch]="appService.selectedMenu">
-
-    <section *ngSwitchCase="'Home'">
-      <app-home></app-home>
-    </section>
-
-    <section *ngSwitchCase="'Skills'">
-      <app-skills></app-skills>
-    </section>
-
-    <section *ngSwitchCase="'Experience'">
-      <app-experience></app-experience>
-    </section>
-
-    <section  *ngSwitchCase="'Contact'">
-      <app-contact></app-contact>
-    </section>
-
-    <section *ngSwitchCase="'Todo'">
-      <app-todo></app-todo>
-    </section>
-
-    <section  *ngSwitchCase="'Legal notices'">
-      <app-legal></app-legal>
-    </section>
-
-    <section *ngSwitchCase="'Credits'">
-      <app-credits></app-credits>
-    </section>
-    
-  </ng-container>
+  <router-outlet></router-outlet>
 </mat-card>
 
