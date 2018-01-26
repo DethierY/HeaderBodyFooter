@@ -8,9 +8,9 @@
   <!-- </div> -->
 </mat-toolbar>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item *ngFor="let title of urlList"
+  <button mat-menu-item *ngFor="let title of urlListHeader"
     (click) = "selectMenu(title.name)"
-    [routerLink] ="routing(title.name)"
+    [routerLink] = "routing(title.name)"
     [style.color] = "changeColor(title.name)">
     <span>{{title.name}}</span>
   </button>

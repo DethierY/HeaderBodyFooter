@@ -1,3 +1,7 @@
 <mat-toolbar color="primary" fxLayoutAlign="start center">
-  <button mat-button *ngFor="let title of listTitlesFooter">{{title}}</button>
+  <button mat-button *ngFor="let title of urlListFooter"
+    (click) = "selectMenu(title.name)"
+    [routerLink] = "routing(title.name)"
+    [style.color] = "changeColor(title.name)"
+  >{{title.name}}</button>
 </mat-toolbar>

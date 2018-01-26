@@ -20,6 +20,7 @@ export class AppService {
   
   editableToDo: ToDo;
   editable = false;
+  selectedMenu = 'Home';
   
   constructor() { }
 
